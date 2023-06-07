@@ -1,0 +1,83 @@
+/* Write your CSS here 
+https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png
+
+
+initiateTimer = () => {
+    let timeLeftVar = this.secondsToTime(60);
+    this.setState({ timeLeft: timeLeftVar })
+  };
+
+  startTimer = () => {
+    let interval = setInterval(this.timer, 1000);
+    this.setState({ interval: interval });
+  };
+
+  timer = () => {
+    if (this.state.timeLeft >0){
+      this.setState({ timeLeft: this.state.timeLeft -1 });
+    }
+    else {
+      clearInterval(this.state.interval);
+      //this.postToSlack();
+    }
+  };
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  background-image: linear-gradient(to Right, #defafe, #cffcf1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 450px;
+}
+
+.timer {
+  background-color: whitesmoke;
+  border-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-img {
+  width: 30px;
+  height: 30px;
+}
+
+.inc-dec-btns {
+  width: 20px;
+  height: 20px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
